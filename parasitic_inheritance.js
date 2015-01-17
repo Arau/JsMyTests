@@ -1,6 +1,5 @@
 function foo(id) {
    return {
-      id: id,
       test: function() {
          return "test " + id;
       }
@@ -10,7 +9,7 @@ function foo(id) {
 function bar(id) {
    var that = foo(id);
    that.secondTest = function (testid) {
-      return testid === this.id;
+      return testid === id;
    };
    return that;
 }
